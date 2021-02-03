@@ -1,0 +1,116 @@
+:root {
+  --text-color: #ffffff;
+  --font-size: 60px;
+}
+
+body {
+  font-family: "Kreon", serif;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.js-weather {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.bodycenter {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--text-color);
+  transition: color 0.5s ease-in-out;
+}
+
+.btn {
+  display: flex;
+  cursor: pointer;
+  font-size: 190px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.clicked {
+  color: var(--text-color);
+}
+
+.form,
+.greetings,
+.toDoForm {
+  margin-top: 50px;
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+.formInput,
+.toDoInput {
+  display: flex;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: var(--font-size);
+  color: white;
+}
+
+.js-greetings {
+  display: flex;
+  color: var(--text-color);
+  font-size: var(--font-size);
+  font-weight: bolder;
+}
+
+.js-toDoList {
+  list-style-type: none;
+  color: var(--text-color);
+  font-size: 30px;
+}
+
+. @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 1s linear;
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 100px;
+  }
+  .formInput,
+  .toDoInput,
+  .js-greetings {
+    font-size: 30px;
+  }
+  .js-toDoList {
+    font-size: 20px;
+  }
+}
